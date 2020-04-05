@@ -36,112 +36,109 @@ export default function Register() {
   console.log(errors);
 
   return (
-    <div className="flex">
-      <div className="w-1/3" />
-      <div className="w-1/3 mt-10 p-4 bg-white">
-        <form
-          className="border border-gray-500 rounded"
-          onSubmit={handleSubmit(onSubmit)}
-        >
-          <div className="p-4">
-            <h1 className="text-lg border-b border-gray-500 font-black text-gray-900">
-              Register
-            </h1>
-            <div className="mt-4">
-              <label>Name</label>
-              <input
-                ref={register({
-                  required: "Required",
-                  pattern: { value: /^[a-zA-Z]+$/, message: "Only Alphabet" }
-                })}
-                type="text"
-                name="name"
-                placeholder="Your name"
-                className="mt-1 p-2 bg-gray-200 rounded border border-gray-400 w-full"
-              />
-              {errors.name && (
-                <p class="text-red-500 text-xs">{errors.name.message}</p>
-              )}
-            </div>
-            <div className="mt-4">
-              <label>Email</label>
-              <input
-                ref={register({
-                  required: "Required",
-                  pattern: {
-                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                    message: "invalid email address"
-                  }
-                })}
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                className="mt-1 p-2 bg-gray-200 rounded border border-gray-400 w-full"
-              />
-              {errors.email && (
-                <p class="text-red-500 text-xs">{errors.email.message}</p>
-              )}
-            </div>
-            <div className="mt-4">
-              <label>Password</label>
-              <input
-                ref={register({
-                  required: "You must specify a password",
-                  minLength: {
-                    value: 8,
-                    message: "Password must have at least 8 characters"
-                  }
-                })}
-                type="password"
-                name="password"
-                placeholder="Secret Password"
-                className="mt-1 p-2 bg-gray-200 rounded border border-gray-400 w-full"
-              />
-              {errors.password && (
-                <p class="text-red-500 text-xs"> {errors.password.message}</p>
-              )}
-            </div>
-            <div className="mt-4">
-              <label>Confirm Password</label>
-              <input
-                ref={register({
-                  validate: value =>
-                    value === password.current || "The passwords do not match"
-                })}
-                type="password"
-                name="password_confirmation"
-                placeholder="Confirm your password"
-                className="mt-1 p-2 bg-gray-200 rounded border border-gray-400 w-full"
-              />
-              {errors.password_confirmation && (
-                <p class="text-red-500 text-xs">
-                  {errors.password_confirmation.message}
-                </p>
-              )}
-            </div>
-
-            <div class="text-center">
-              <div class="mt-12">
-                <input
-                  className="mt-1 py-4 px-12 border border-gray-400 rounded cursor-pointer bg-teal-500 text-white text-center"
-                  value="Register"
-                  type="submit"
-                />
-              </div>
-              <div
-                class="mt-4 text-center inline-block align-baseline font-bold text-sm text-teal-500 hover:text-blue-800"
-                href="#"
-              >
-                <Link to="/login">Back to Login</Link>
-              </div>
-            </div>
-
-            {isLoading && (
-              <p class="text-teal-500 text-xs text-center">Loading...</p>
+    <div className=" mt-10 p-4 bg-white">
+      <form
+        className="border border-gray-500 rounded p-10"
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        <div className="p-4">
+          <h1 className="font-sans text-2xl border-b border-gray-500 font-black text-gray-900">
+            Register
+          </h1>
+          <div className="mt-4">
+            <label className="font-sans font-semibold">Name</label>
+            <input
+              ref={register({
+                required: "Required",
+                pattern: { value: /^[a-zA-Z]+$/, message: "Only Alphabet" }
+              })}
+              type="text"
+              name="name"
+              placeholder="Your name"
+              className="mt-1 p-2 bg-gray-200 rounded border border-gray-400 w-full"
+            />
+            {errors.name && (
+              <p class="text-red-500 text-xs">{errors.name.message}</p>
             )}
           </div>
-        </form>
-      </div>
+          <div className="mt-4">
+            <label className="font-sans font-semibold">Email</label>
+            <input
+              ref={register({
+                required: "Required",
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                  message: "invalid email address"
+                }
+              })}
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              className="mt-1 p-2 bg-gray-200 rounded border border-gray-400 w-full"
+            />
+            {errors.email && (
+              <p class="text-red-500 text-xs">{errors.email.message}</p>
+            )}
+          </div>
+          <div className="mt-4">
+            <label className="font-sans font-semibold">Password</label>
+            <input
+              ref={register({
+                required: "You must specify a password",
+                minLength: {
+                  value: 8,
+                  message: "Password must have at least 8 characters"
+                }
+              })}
+              type="password"
+              name="password"
+              placeholder="Secret Password"
+              className="mt-1 p-2 bg-gray-200 rounded border border-gray-400 w-full"
+            />
+            {errors.password && (
+              <p class="text-red-500 text-xs"> {errors.password.message}</p>
+            )}
+          </div>
+          <div className="mt-4">
+            <label className="font-sans font-semibold">Confirm Password</label>
+            <input
+              ref={register({
+                validate: value =>
+                  value === password.current || "The passwords do not match"
+              })}
+              type="password"
+              name="password_confirmation"
+              placeholder="Confirm your password"
+              className="mt-1 p-2 bg-gray-200 rounded border border-gray-400 w-full"
+            />
+            {errors.password_confirmation && (
+              <p class="text-red-500 text-xs">
+                {errors.password_confirmation.message}
+              </p>
+            )}
+          </div>
+
+          <div class="text-center">
+            <div class="mt-12">
+              <input
+                className="mt-1 py-4 px-12 border border-gray-400 rounded cursor-pointer bg-teal-500 text-white text-center"
+                value="Register"
+                type="submit"
+              />
+            </div>
+            <div
+              class="mt-4 text-center inline-block align-baseline font-bold text-sm text-teal-500 hover:text-blue-800"
+              href="#"
+            >
+              <Link to="/login">Back to Login</Link>
+            </div>
+          </div>
+
+          {isLoading && (
+            <p class="text-teal-500 text-xs text-center">Loading...</p>
+          )}
+        </div>
+      </form>
     </div>
   );
 }
