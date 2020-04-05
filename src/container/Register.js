@@ -36,9 +36,14 @@ export default function Register() {
   console.log(errors);
 
   return (
-    <div className=" mt-10 p-4 bg-white">
+    <div
+      className="p-4 bg-white"
+      style={{
+        backgroundImage: "url(" + "https://i.redd.it/y1ostvqnr4711.jpg" + ")"
+      }}
+    >
       <form
-        className="border border-gray-500 rounded p-10"
+        className="border border-gray-500 rounded p-10 bg-white"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="p-4">

@@ -33,9 +33,14 @@ export default function Login() {
   };
 
   return (
-    <div className="flex justify-center m-10">
+    <div
+      className="flex justify-center items-center h-screen"
+      style={{
+        backgroundImage: "url(" + "https://i.redd.it/y1ostvqnr4711.jpg" + ")"
+      }}
+    >
       <form
-        className="border rounded border-gray-500"
+        className="border rounded border-gray-500 mt-10 mb-20 bg-white"
         onSubmit={handleSubmit(onLogin)}
       >
         <div className="p-4">

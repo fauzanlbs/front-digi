@@ -22,14 +22,20 @@ export default function Home() {
   }, []);
 
   return (
-    <React.Fragment>
+    <div
+      style={{
+        backgroundImage: "url(" + "https://i.redd.it/y1ostvqnr4711.jpg" + ")"
+      }}
+    >
       <Header />
-      <div className="flex items-center  w-full bg-teal-lighter">
-        <div className="w-full bg-white rounded shadow-lg p-8 m-4 md:max-w-sm md:mx-auto">
-          <Autocomplete options={users.map(dt => dt.name)} />
+      <div className="p-10">
+        <div className="flex items-center  w-full bg-teal-lighter">
+          <div className="w-full bg-white rounded shadow-lg p-8 m-4 md:max-w-sm md:mx-auto">
+            <Autocomplete options={users.map(dt => dt.name)} />
+          </div>
         </div>
+        <Userlist data={users} />
       </div>
-      <Userlist data={users} />
-    </React.Fragment>
+    </div>
   );
 }
