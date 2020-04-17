@@ -127,7 +127,7 @@ export default function Register() {
             <div class="mt-12">
               <input
                 className="mt-1 py-4 px-12 border border-gray-400 rounded cursor-pointer bg-teal-500 text-white text-center"
-                value="Register"
+                value="Daftar"
                 type="submit"
               />
             </div>
@@ -135,7 +135,7 @@ export default function Register() {
               class="mt-4 text-center inline-block align-baseline font-bold text-sm text-teal-500 hover:text-blue-800"
               href="#"
             >
-              <Link to="/login">Back to Login</Link>
+              <Link to="/login">Balik ke Login</Link>
             </div>
           </div>
 

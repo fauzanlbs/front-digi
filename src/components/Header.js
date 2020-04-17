@@ -23,7 +23,7 @@ export default function Header() {
   return (
     <div className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
-        <span class="text-2xl tracking-tight font-black">Registered Users</span>
+        <span class="text-2xl tracking-tight font-black">Relawan Terdaftar</span>
         <div className="w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5"></div>
       </div>
       <div className="flex-end">
