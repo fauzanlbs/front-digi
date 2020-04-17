@@ -45,7 +45,7 @@ export default function Login() {
       >
         <div className="p-4">
           <h1 className="font-sans text-2xl border-b border-gray-500 font-black text-gray-900">
-            Login
+            Login Masuk
           </h1>
 
           <div className="mt-4">
@@ -86,7 +86,7 @@ export default function Login() {
               class="mt-4 mb-10 text-center inline-block align-baseline font-bold text-sm text-teal-500 hover:text-blue-800"
               href="#"
             >
-              <Link to="/register">Register</Link>
+              <Link to="/register">Pendaftaran Relawan</Link>
             </div>
           </div>
 

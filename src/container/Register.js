@@ -48,7 +48,7 @@ export default function Register() {
       >
         <div className="p-4">
           <h1 className="font-sans text-2xl border-b border-gray-500 font-black text-gray-900">
-            Register
+            Pendaftaran Relawan
           </h1>
           <div className="mt-4">
             <label className="font-sans font-semibold">Name</label>

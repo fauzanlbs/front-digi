@@ -6,7 +6,7 @@ export default function Userlist(props) {
       <div className="container my-20">
         <div className="w-full rounded-lg rounded-b-none overflow-hidden sm:shadow-lg lg:bg-gray-700">
           <p class="m-4 font-sans text-2xl text-white text-center font-extrabold tracking-widest">
-            LIST REGISTERED USERS
+            LIST RELAWAN
           </p>
         </div>
         {props.data.map((data, idx) => {
